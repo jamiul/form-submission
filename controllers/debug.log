@@ -1,12 +1,12 @@
 Array
 (
-    [amount] => 100
-    [buyer] => John Doe
-    [receipt_id] => 121211
-    [items] => ["item1","item2"]
-    [buyer_email] => johndoe@example.com
-    [buyer_ip] => 192.168.1.1
-    [note] => Test submission
-    [city] => New York
-    [phone] => 1234567890
+    [amount] => 20
+    [buyer] => Sunt quis veritatis
+    [receipt_id] => Veniam accusamus re
+    [buyer_email] => cikunyhil@mailinator.com
+    [note] => Ut reprehenderit quo non beatae et eu velit aliqua Architecto
+    [city] => Perspiciatis volupt
+    [phone] => 88017675191154
+    [entry_by] => 99
+    [items] => ["Dolor aliquid aut si"]
 )

@@ -10,11 +10,6 @@ class Submission {
         $this->db = $database->connect();
     }
 
-    /**
-     * Save submission to the database.
-     * @param array $data Submission data
-     * @return bool True on success, false on failure
-     */
     public function save($data) {
         // Validate required fields
         if (!$this->validate($data)) {
@@ -70,11 +65,6 @@ class Submission {
         return $result;
     }
 
-    /**
-     * Validate submission data.
-     * @param array $data Submission data
-     * @return bool True if valid, false otherwise
-     */
     private function validate($data) {
         // Check required fields
         $required_fields = ['amount', 'buyer', 'receipt_id', 'items', 'buyer_email', 'city', 'phone', 'entry_at', 'entry_by'];

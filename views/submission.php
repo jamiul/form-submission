@@ -84,24 +84,12 @@
                         }).get()
                     )
                 });
-                let filteredData1 = {
-                amount: 100,
-                buyer: 'John Doe',
-                receipt_id: '121211',
-                items: JSON.stringify(['item1', 'item2']),
-                buyer_email: 'johndoe@example.com',
-                buyer_ip: '192.168.1.1',
-                note: 'Test submission',
-                city: 'New York',
-                phone: '1234567890',
-            };
+
                 // Send AJAX request
                 $.ajax({
                     url: '../controllers/SubmissionController.php',
-                    // url: '../database/test-sub-controller.php',
                     type: 'POST',
-                    data: filteredData1,
-                    // contentType: 'application/json', // Send as JSON
+                    data: filteredData,
                     success: function (response) {
                       console.log(response);
                     },
