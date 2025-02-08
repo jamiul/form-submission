@@ -1,12 +1,12 @@
 Array
 (
-    [amount] => 121
-    [buyer] => 121
-    [receipt_id] => 1212
-    [buyer_email] => mail@mail.com
-    [note] => sdfsf
-    [city] => asdfasf
-    [phone] => 880
-    [entry_by] => 656
-    [items] => ["22121"]
+    [amount] => 12121
+    [buyer] => 1212
+    [receipt_id] => 2
+    [buyer_email] => 1212@mail.com
+    [note] => sdfsadfas
+    [city] => fasdfasdf
+    [phone] => 8809595
+    [entry_by] => 98989
+    [items] => []
 )
