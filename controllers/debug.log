@@ -1,0 +1,12 @@
+Array
+(
+    [amount] => 100
+    [buyer] => John Doe
+    [receipt_id] => 121211
+    [items] => ["item1","item2"]
+    [buyer_email] => johndoe@example.com
+    [buyer_ip] => 192.168.1.1
+    [note] => Test submission
+    [city] => New York
+    [phone] => 1234567890
+)
