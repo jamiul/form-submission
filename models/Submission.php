@@ -21,6 +21,7 @@ class Submission {
 
         // Generate hash key using receipt_id and salt
         $hash_key = hash('sha512', $data['receipt_id'] . $salt);
+        $buyer_ip = $this->getUserIP();
 
         // Prepare SQL query
         $stmt = $this->db->prepare("
@@ -36,13 +37,13 @@ class Submission {
 
         // Bind parameters
         $stmt->bind_param(
-            'isssssssssssi',
+            'dssssssssssss',
             $data['amount'],        // Integer
             $data['buyer'],         // String
             $data['receipt_id'],    // String
             $data['items'],         // String
             $data['buyer_email'],   // String
-            $data['buyer_ip'],      // String
+            $buyer_ip,              // String
             $data['note'],          // String
             $data['city'],          // String
             $data['phone'],         // String
@@ -89,6 +90,18 @@ class Submission {
         }
 
         return true;
+    }
+
+    private function getUserIP() {
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            return $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+            // Convert IPv6 localhost (::1) to IPv4 localhost (127.0.0.1)
+            return ($ip === '::1') ? '127.0.0.1' : $ip;
+        }
     }
 }
 

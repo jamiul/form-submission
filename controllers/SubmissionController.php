@@ -45,9 +45,17 @@ class SubmissionController {
             'entry_by'     => 1, // Example user ID, replace with actual logged-in user ID
         ];
 
+        // Check if the cookie exists
+        if (isset($_COOKIE['form_submitted'])) {
+            // If the cookie exists, block the submission
+            echo "You have already submitted the form. Please try again after 24 hours.";
+            exit;
+        }
+
         // Save to the database
         $result = $this->submission->save($data);
         if ($result) {
+            setcookie('form_submitted', '1', time() + 86400, "/"); // 24-hour expiration
             http_response_code(200);
             echo json_encode(['message' => 'Submission saved successfully!']);
         } else {

@@ -1,12 +1,12 @@
 Array
 (
-    [amount] => 20
-    [buyer] => Sunt quis veritatis
-    [receipt_id] => Veniam accusamus re
-    [buyer_email] => cikunyhil@mailinator.com
-    [note] => Ut reprehenderit quo non beatae et eu velit aliqua Architecto
-    [city] => Perspiciatis volupt
-    [phone] => 88017675191154
-    [entry_by] => 99
-    [items] => ["Dolor aliquid aut si"]
+    [amount] => 121
+    [buyer] => 121
+    [receipt_id] => 1212
+    [buyer_email] => mail@mail.com
+    [note] => sdfsf
+    [city] => asdfasf
+    [phone] => 880
+    [entry_by] => 656
+    [items] => ["22121"]
 )
